@@ -4,6 +4,7 @@ public class Cart {
     private static int total = 0;
     public static void main(String[] args) {
         addToCart("Sneakers", 4200);
+        addToCart("Sneakers", 4200);
         addToCart("Polo", 1600);
         addToCart("Shorts", 1800);
         print("Cart Contains: ");
@@ -12,6 +13,10 @@ public class Cart {
         print("Cart contains");
     }
     public static void addToCart (String product, int price) {
+        if(contains(product)){
+            System.out.println("Product already is in a cart");
+            return;
+        }
         items = items + "\n"+ product + "-"+ price;
         total += price;
     }
@@ -31,5 +36,8 @@ public class Cart {
             System.out.println("Cart is Empty");
         }
         else System.out.println(items);
+    }
+    public static boolean contains (String product) {
+        return items.contains(product);
     }
 }

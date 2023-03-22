@@ -1,43 +1,52 @@
 public class Cart {
 
-    private static String items = "";
-    private static int total = 0;
-    public static void main(String[] args) {
-        addToCart("Sneakers", 4200);
-        addToCart("Sneakers", 4200);
-        addToCart("Polo", 1600);
-        addToCart("Shorts", 1800);
-        print("Cart Contains: ");
-        System.out.println("total to pay: "+getPrice());
-        clear();
-        print("Cart contains");
+    private String items = "";
+    private int total = 0;
+    private int limit;
+    public Cart(){
+        items = "Some products";
+        this.limit = 15000;
     }
-    public static void addToCart (String product, int price) {
+    public Cart(int totalLimit) {
+        this();
+        limit = totalLimit;
+    }
+    public Cart(String items, int total){
+        this();
+        this.items = this.items + items;
+        this.total = total;
+    }
+    public void addToCart (String product, int price, int count) {
         if(contains(product)){
             System.out.println("Product already is in a cart");
             return;
         }
-        items = items + "\n"+ product + "-"+ price;
-        total += price;
+
+        if (total + price * count>= limit) {
+            return;
+        }
+        items = items + "\n"+ product + "-"+ price+ " quantity: "+count;
+        total += price * count;
     }
 
-    public static void clear () {
+    public void clear () {
         items = "";
         total = 0;
     }
 
-    public static int getPrice () {
+    public int getTotal () {
         return total;
 
     }
-    public static void print (String title) {
+    public void print (String title) {
         System.out.println(title);
         if (items.isEmpty()) {
             System.out.println("Cart is Empty");
         }
         else System.out.println(items);
     }
-    public static boolean contains (String product) {
+    public boolean contains (String product) {
         return items.contains(product);
     }
+
 }

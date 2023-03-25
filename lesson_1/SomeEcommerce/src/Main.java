@@ -15,5 +15,11 @@ public class Main {
         System.out.println("Total in Vasya cart: "+vasyaCart.getTotal());
 
         mishaCart.print("in Misha cart: ");
+
+        Product someAProduct = new Product("body-chest", 5400);
+        Order order = new Order();
+        order.addProduct(someAProduct);
+        System.out.println(someAProduct.toProductString());
+
     }
 }

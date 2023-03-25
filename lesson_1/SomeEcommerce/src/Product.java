@@ -1,15 +1,28 @@
 public class Product {
     private String title;
-    private int price;
+    private double price;
 
-    public Product (String title, int price){
+    //immutable data
+    //==========================================
+    private final String name = "Some Product";
+    private double discount = 0.15;
+    public String getName() {
+        return name;
+    }
+
+    public double getDiscount() {
+        return discount;
+    }
+    //==========================================
+
+    public Product (String title,double price){
         this.title = title;
         this.price = price;
     }
     public void  setTitle(String title){
         this.title = title;
     }
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -17,7 +30,10 @@ public class Product {
         return title;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
+    }
+    public String toProductString(){
+        return title+" - "+price;
     }
 }

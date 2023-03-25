@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e9ce4f1-9270-4c92-b215-25476f17ebe7" name="Changes" comment="" />
+    <list default="true" id="0e9ce4f1-9270-4c92-b215-25476f17ebe7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/out/production/SomeEcommerce/Order.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/out/production/SomeEcommerce/Product.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/src/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/out/production/SomeEcommerce/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/out/production/SomeEcommerce/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lesson_1/SomeEcommerce/src/Product.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
